@@ -1,0 +1,19 @@
+#popupWrapper {
+    width: 300px;
+    text-align: center;
+}
+
+.popupNote {
+    font-size: 12px;
+}
+
+.popupLinebreak {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.footNote {
+    font-size: 8px;
+    text-align: left;
+    margin-top: 30px;
+}
