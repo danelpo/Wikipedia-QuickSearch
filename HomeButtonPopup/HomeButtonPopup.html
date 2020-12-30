@@ -5,11 +5,38 @@
         <link rel="stylesheet" href="HomeButtonPopup.css">
     </head>
     <body>
-        <div id="popupWrapper">
+        <div id="popupWrapper" style="display: block;">
             <p class="popupNote">Thank you for using Wikipedia QuickSearch</p>
             <hr class="popupLinebreak"/>
-            <p class="popupNote">For questions, feedback and bug reports, please contact me <a>here</a></p>
+            <p class="popupNote">For questions, feedback and bug reports, please contact me <a style="color: rgb(0,0,150);" id="formButton">here</a></p>
             <p class="footNote">For source code, visit <a href="https://github.com/danelpo/Wikipedia-QuickSearch" target="_blank">visit this pulic repository</a></p>
         </div>
+        
+        
+        <div id="formWrapper" style="display: none;">
+            
+            <form id="userSubmissionForm" accept-charset="utf-8" action="https://formspree.io/f/xvovvlle" method="POST">
+                <div class="fields">
+                    <div class="field">
+                        <label for="nameSubmitText">Name</label>
+                        <input id="nameSubmitText" type="text" name="name">
+                    </div>
+                    <div class="field">
+                        <label for="emailSubmitText">Email</label>
+                        <input id="emailSubmitText" type="text" name="_replyto">
+                    </div>
+                    <div class="field">
+                        <label for="messageSubmitText">Message</label>
+                        <textarea name="message" id="messageSubmitText" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input form="userSubmissionForm" id="formSubmitButton" type="submit" value="Send Email" disabled></li>
+                </ul>
+            </form>
+
+        </div>
     </body>
+
+    <script src="HomeButtonPopup.js"></script>
 </html>
