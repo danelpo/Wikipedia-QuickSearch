@@ -8,11 +8,11 @@ document.addEventListener('dblclick', function () {
     }
 });
 
-document.addEventListener('click', function(){
+document.addEventListener('click', function(e){
     if(document.getElementById(modalID)){
         document.getElementById(modalID).remove();
     }
-});
+}, false);
 
 function retriveSearch(searchWord){
     console.log();
@@ -37,13 +37,15 @@ function retriveSearch(searchWord){
     http.onreadystatechange=(e)=>{
         if (http.readyState == 4 && http.status == 200) {
             const myJSON = JSON.parse(http.responseText).query.pages;
-            let articleExtract = myJSON[Object.keys(myJSON)[0]].extract;
+            const articleExtract = myJSON[Object.keys(myJSON)[0]].extract;
+            const articleTitle = myJSON[Object.keys(myJSON)[0]].title;
+
             if(articleExtract){
                 if(articleExtract.length > 45){
                     if(articleExtract.length > 700) {
-                        makePopup(articleExtract.substring(0, 700)+"...");
+                        makePopup(articleExtract.substring(0, 700)+"...", articleTitle);
                     }else{
-                        makePopup(articleExtract);
+                        makePopup(articleExtract, articleTitle);
                     }
                 }
             }
@@ -51,22 +53,37 @@ function retriveSearch(searchWord){
     }
 }
 
-function makePopup(article){
-    var modal = document.createElement('div');
+function makePopup(articleExtract, articleTitle){
+    let modal = document.createElement('div');
     modal.style.position = "fixed";
     modal.style.bottom = "2%";
     modal.style.right = "2%";
     modal.style.width = "25%";
-    modal.style.height = "50%";
+    modal.style.height = "auto";
     modal.style.zIndex = "99";
     modal.style.backgroundColor = "white";
     modal.style.border = "2px solid rgba(0,0,0,0.1)";
-    modal.innerHTML = article;
     modal.id = modalID;
+    modal.className = modalID;
     modal.style.fontFamily = 'font-family: "Times New Roman", Times, serif';
-    modal.style.fontSize = "12px";
-    modal.style.padding = "30px";
+    modal.style.fontSize = "14px";
+    modal.style.padding = "25px";
     modal.style.borderRadius = "5%";
+    modal.style.overflow = "auto";
+
+    modal.addEventListener('click', function(ev){
+        ev.stopPropagation();
+    }, false);
+
+    let title = document.createElement('h1');
+    title.innerHTML = articleTitle;
+    modal.appendChild(title);
+
+    modal.appendChild(document.createElement('hr'));
+
+    let article = document.createElement('p');
+    article.innerHTML = articleExtract;
+    modal.appendChild(article);
 
     document.body.appendChild(modal);
 }
