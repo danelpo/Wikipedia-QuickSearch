@@ -4,6 +4,9 @@
     "version": "0.0.0",
     "description": "in-page quick wikipedia search",
     "author": "Danel, danelpo",
+    "web_accessible_resources": [
+        "images/wikipedia-logo.png"
+    ],
     "content_scripts": [
         {
             "matches": [
