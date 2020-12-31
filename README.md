@@ -25,5 +25,5 @@ USING FIREFOX:
 4. The extension should now be added to Firefox.
 
 NOTE: if you install the extension as a file and not through the store, any future changes / updates to the extension will not be automatically updated.
-
+<br /><br /><br />
 Thank you for downloading Wikipedia QuickSearch. Hopefully you will enjoy it!
