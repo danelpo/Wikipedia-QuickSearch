@@ -18,7 +18,7 @@
         }
     ],
     "browser_action": {
-        "default_icon": "images/logo.png",
+        "default_icon": "images/logo/cropped_logo.png",
         "default_popup": "HomeButtonPopup/HomeButtonPopup.html"
     }
 }
