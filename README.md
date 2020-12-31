@@ -7,7 +7,7 @@ how to download:
 
 using Chrome: *EXTENSION WILL GO LIVE SOON*<br />
 using firefox: *EXTENSION WILL GO LIVE SOON*<br />
-using edge: *EXTENSION WILL GO LIVE SOON*
+using edge: https://microsoftedge.microsoft.com/addons/detail/wikipedia-quicksearch/kjjjceephpaagaaiehfccgdcjjifdbcb
 
 ----------   ----------   ----------
 if you wish to install it from file, instead of downloading it from store, follow these steps:
