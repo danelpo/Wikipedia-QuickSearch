@@ -63,7 +63,7 @@ function makePopup(articleExtract, articleTitle){
     modal.style.right = "2%";
     modal.style.width = "25%";
     modal.style.height = "auto";
-    modal.style.zIndex = "99";
+    modal.style.zIndex = "1000";
     modal.style.backgroundColor = "white";
     modal.style.border = "2px solid rgba(0,0,0,0.1)";
     modal.id = modalID;
