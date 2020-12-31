@@ -5,8 +5,8 @@ A Chrome, Firefox, and Edge extension that allows a user to perform in-page Wiki
 ----------   ----------   ---------
 how to download:
 
-using Chrome: *EXTENSION WILL GO LIVE SOON*
-using firefox: *EXTENSION WILL GO LIVE SOON*
+using Chrome: *EXTENSION WILL GO LIVE SOON*<br />
+using firefox: *EXTENSION WILL GO LIVE SOON*<br />
 using edge: *EXTENSION WILL GO LIVE SOON*
 
 ----------   ----------   ----------
