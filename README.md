@@ -6,7 +6,7 @@ A Chrome, Firefox, and Edge extension that allows a user to perform in-page Wiki
 how to download:
 
 using Chrome: *EXTENSION WILL GO LIVE SOON*<br />
-using firefox: *EXTENSION WILL GO LIVE SOON*<br />
+using firefox: https://addons.mozilla.org/en-CA/firefox/addon/wikipedia-quicksearch/<br />
 using edge: https://microsoftedge.microsoft.com/addons/detail/wikipedia-quicksearch/kjjjceephpaagaaiehfccgdcjjifdbcb
 
 ----------   ----------   ----------
