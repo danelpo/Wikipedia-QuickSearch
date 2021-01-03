@@ -42,11 +42,11 @@ function retriveSearch(searchWord) {
     http.onreadystatechange = (e) => {
         if (http.readyState == 4 && http.status == 200) {
             const myJSON = JSON.parse(http.responseText).query.pages;
-            const articleExtract = myJSON[Object.keys(myJSON)[0]].extract || '';
+            let articleExtract = myJSON[Object.keys(myJSON)[0]].extract || '';
             const articleTitle = myJSON[Object.keys(myJSON)[0]].title;
 
             if (articleExtract.length > 650) {
-                articleExtract = articleExtract.substring(0, 650) + "..."
+                articleExtract = articleExtract.substring(0, 650) + "...";
             }
             makePopup(articleExtract, articleTitle, articleLang);
         }
